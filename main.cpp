@@ -8,7 +8,9 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-
+    //converting char argv[] to integer
+    int port = std::atoi(argv[1]);
+    //creating obj
     restServer rServer;
 
     QTimer *timer = new QTimer;
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
 
     timer->start(1000);
 
-    rServer.startRestServer(5555);
+    rServer.startRestServer(port);
 
     //jsC.showJson(jsC.toJson());
 
