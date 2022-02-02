@@ -7,16 +7,22 @@ randomGenerator::randomGenerator()
 
 double randomGenerator::genTemp()
 {
-    return arc4random_uniform(27.3) + -7.8;
+    qsrand(time(NULL));
+
+    return qrand()  % 27;
 }
 
 
 double randomGenerator::genDewPoint()
 {
-    return arc4random_uniform(27.3) + 8.7;
+    qsrand(time(NULL));
+
+    return qrand()  % 17;
 }
 
 double randomGenerator::genHumidity()
 {
-    return arc4random_uniform(100) + 8;
+    qsrand(time(NULL));
+
+    return qrand()  % 98;
 }

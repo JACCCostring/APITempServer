@@ -2,7 +2,7 @@
 #define RANDOMGENERATOR_H
 
 #include <iostream>
-#include <random>
+#include <QtGlobal>
 
 class randomGenerator
 {
