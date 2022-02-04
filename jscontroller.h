@@ -10,14 +10,21 @@ class jsController : public QObject
     Q_OBJECT
 public:
     explicit jsController(QObject *parent = nullptr);
-    //obj initializer
+    //members initializer
     void setInitValues(double, double, double, double);
     //convert to json method
     //const QByteArray toJson();
-    //converto to json raw data, but its overloading method with parameter
+    //convert to json raw data, but its overloading method with parameter
     static const QByteArray toJson();
+    static const QByteArray toJsonValue(const QString &, const QVariant &);
+    static void restartValues();
+    //static getter methods
+    static double getDTemp();
+    static double getDPoint();
+    static double getNTemp();
+    static double getHumidity();
     //debuging pourpus
-    void showJson(const QByteArray &);
+   // void showJson(const QByteArray &);
 
 private:
     //all private members are static because toJson() method
