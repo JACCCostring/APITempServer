@@ -11,7 +11,8 @@ SOURCES += \
         jscontroller.cpp \
         main.cpp \
         randomgenerator.cpp \
-        restserver.cpp
+        restserver.cpp \
+        routecontroller.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -21,4 +22,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     jscontroller.h \
     randomgenerator.h \
-    restserver.h
+    restserver.h \
+    routecontroller.h
